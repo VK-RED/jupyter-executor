@@ -11,7 +11,7 @@ types.setTypeParser(1082, val => val); // date        -> "2024-07-10"
 types.setTypeParser(1114, val => val); // timestamp   -> "2024-07-10 18:30:00"
 
 const DB_CONFIGS: { [x: string]: string } = JSON.parse(process.env.DATABASE_CONFIGS!);
-const PORT = 8080;
+const PORT = 8001;
 const app = express();
 app.use(express.json())
 app.use(middleware);
