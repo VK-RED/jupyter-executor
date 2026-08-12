@@ -14,6 +14,11 @@ const DB_CONFIGS: { [x: string]: string } = JSON.parse(process.env.DATABASE_CONF
 const PORT = 8001;
 const app = express();
 app.use(express.json())
+
+app.get("/", (_req, res) => {
+  return res.send("Hello world !");
+});
+
 app.use(middleware);
 
 const OID_TO_HINT: { [x: number]: string } = {
